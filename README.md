@@ -3,8 +3,7 @@
 ## Requirements
 
 ### Transfer Money
-As a user I should be able to transfer money using the Transfer Money form as shown in the UI Design.
----
+
 As a User I should be able to:
 
 1. Fill in the "TO ACCOUNT" and "AMOUNT" fields of the form. 
@@ -21,7 +20,7 @@ As a User I should be able to search my recent transactions by typing a keyword 
 
 As a User I should be able to sort by recent transactions by Date, Amount and Beneficiary by clicking the corresponding sorting action.
 
-======
+***
 
 ## Getting Started
 
@@ -67,7 +66,9 @@ ng serve
 
 Now browse to the app at [`http://localhost:4200/`].
 
-## `Components based architecture`
+***
+
+## Components based architecture
 
 Created components based architecture so in future we can use same components to another application or same application
 
@@ -80,7 +81,9 @@ Here i created 4 components
 
 And that components used into app.component.html
 
-### Useful links
+***
+
+## Useful links
 
 [angular]: https://angular.io/
 [httpclient]: https://angular.io/guide/http
