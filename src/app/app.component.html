@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="row">
+    <div>
+      <img src="./assets/logo.jpg" alt="Bank Logo" />
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-12  col-sm-12  col-xs-12 layout-space">
+        <payment [transfers]="transactions" [balance]="balance" (send)="addNewTransactionsOnList($event)">
+        </payment>
+      </div>
+      <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+        <transaction-list [recentTransacations]="transactions">
+        </transaction-list>
+      </div>
+    </div>
+  </div>
+</div>

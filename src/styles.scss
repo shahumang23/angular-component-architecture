@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+.custom-btn {
+    background-color: #ed6f35;
+}
+
+.panel-content{
+    background-color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+input {
+    border: 0px;
+}
+input:focus {
+    outline: none;
+}
+
+.form-control{
+    border: 0px;
+    border-bottom:1px solid #ced4da;
+}
+
+.form-control:focus{
+    box-shadow: none;
+}

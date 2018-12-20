@@ -1,0 +1,23 @@
+<header [icon]='icon' [title]="title"></header>
+<div class="container panel-content">
+  <label>
+    <strong>From Account</strong>
+  </label>
+  <p>{{fromAccount}}</p>
+  <label>
+    <strong>To Account</strong>
+  </label>
+  <p>{{toAccount}}</p>
+  <label>
+    <strong>Amount</strong>
+  </label>
+  <p class="usd-sign">{{amount | currency:'USD'}}</p>
+  <div class="d-flex justify-content-between">
+    <div class="text-left">
+      <button class="btn custom-btn" (click)="onNotify('cancel')">Cancel</button>
+    </div>
+    <div class="text-right">
+      <button class="btn custom-btn pull-right" (click)="onNotify('confirm')">Transfer</button>
+    </div>
+  </div>
+</div>

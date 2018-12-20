@@ -1,0 +1,43 @@
+<div *ngIf="!hide">
+  <header [icon]='icon' [title]="title"></header>
+  <div class="container panel-content">
+    <form name="form" (ngSubmit)="f.form.valid && onClick()" #f="ngForm" novalidate>
+      <div class="form-group">
+        <label for="fromAccount">
+          <strong>From Account</strong>
+        </label>
+        <input [readonly]="true" class="form-control" type="text" id="fromAccount" placeholder="Free Checking(4692)  -  {{balance | currency:'USD'}}"
+        />
+      </div>
+      <div class="form-group">
+        <label for="toAccount">
+          <strong>To Account</strong>
+        </label>
+        <input class="form-control" type="text" name="toAccount" [(ngModel)]="merchantSelected" placeholder="Enter Account Number"
+          #name="ngModel" required />
+      </div>
+      <div class="form-group">
+        <label for="amount">
+          <strong>Amount</strong>
+        </label>
+        <div class="form-control">
+          <span>$</span>
+          <input type="text" name="amount" [(ngModel)]="amount" (blur)="onBlur($event.target.value)" placeholder="0.00" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="alert alert-danger" *ngIf="errorAmount">
+          {{errorAmount}}.
+        </div>
+      </div>
+      <div class="text-right">
+        <button type="submit" [hidden]="hide" class="btn custom-btn " [disabled]="f.form.pristine || f.form.invalid || errorAmount">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="preview" *ngIf="hide">
+  <preview [toAccount]="merchantSelected" [amount]="amount" (notify)="onNotify($event)">
+  </preview>
+</div>
