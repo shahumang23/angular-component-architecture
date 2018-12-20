@@ -84,15 +84,22 @@ And that components used into app.component.html
 ***
 
 ## Useful links
+[angular](https://angular.io/)
 
-[angular]: https://angular.io/
-[httpclient]: https://angular.io/guide/http
-[jasmine]: https://jasmine.github.io/
-[karma]: https://karma-runner.github.io/
-[node]: https://nodejs.org/
-[npm]: https://www.npmjs.org/
-[typescript]: https://www.typescriptlang.org/
-[typescript]: https://www.typescriptlang.org/
-[webpack]: https://webpack.js.org/
-[bootstrap]: https://getbootstrap.com/
-[RxJS]: https://angular.io/guide/rx-library
+[httpclient](https://angular.io/guide/http)
+
+[jasmine](https://jasmine.github.io/)
+
+[karma](https://karma-runner.github.io/)
+
+[node](https://nodejs.org/)
+
+[npm](https://www.npmjs.org/)
+
+[typescript](https://www.typescriptlang.org/)
+
+[webpack](https://webpack.js.org/)
+
+[bootstrap](https://getbootstrap.com/)
+
+[RxJS](https://angular.io/guide/rx-library)
