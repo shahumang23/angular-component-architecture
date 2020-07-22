@@ -9,11 +9,11 @@
 <div class="content">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 col-md-12  col-sm-12  col-xs-12 layout-space">
+      <div class="col-lg-4 col-xs-12 layout-space">
         <payment [transfers]="transactions" [balance]="balance" (send)="addNewTransactionsOnList($event)">
         </payment>
       </div>
-      <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+      <div class="col-lg-7 col-xs-12">
         <transaction-list [recentTransacations]="transactions">
         </transaction-list>
       </div>

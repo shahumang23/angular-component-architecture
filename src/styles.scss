@@ -1,13 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
-.custom-btn {
-    background-color: #ed6f35;
+$primary-btn-color: #ed6f35;
+$white-color: #ffffff;
+.btn-primary {
+    &:disabled {
+        background-color: $primary-btn-color;
+        border-color: $primary-btn-color;
+    }
+    background-color: $primary-btn-color;
+    border-color: $primary-btn-color;
 }
 
 .panel-content{
-    background-color: #fff;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    background-color: $white-color;
+    padding: 15px;
 }
 
 input {

@@ -1,8 +1,8 @@
 <header [icon]='icon' [title]="title"></header>
 
-<div class="container panel-content">
+<div class="container transaction-list panel-content">
   <div class="row search-panel">
-    <div class="input-group col-xl-5 col-lg-12 col-md-12 search-box">
+    <div class="input-group col-xl-5 col-md-12 search-box">
       <input class="form-control" [ngModel]="searchText" (ngModelChange)="searchText=$event" type="search" placeholder="Search by typing.."
         id="search-input">
       <span class="input-group-append" *ngIf="searchText">
@@ -12,7 +12,7 @@
       </span>
     </div>
     <!--  <input type="search" [ngModel]="searchText" (ngModelChange)="searchText=$event"  placeholder="Search by typing.." class="form-control col-lg-5 col-md-12" /> -->
-    <div class="col-xl-7 col-lg-12 col-md-12 sorting-panel">
+    <div class="col-xl-7 col-md-12 sorting-panel">
       <strong class="text-center">Sort by </strong>
       <div class="btn-group" role="group" aria-label="sort by">
         <button class="btn btn-outline-secondary" type="button" (click)="orderProperty = 'transactionDate'; sortingType = !sortingType">Date</button>
@@ -23,24 +23,22 @@
   </div>
   <table class="table table-bordered">
     <tr *ngFor="let data of recentTransacations | filter:searchText | sortBy:orderProperty:sortingType">
-      <td class="col-xs-2" [ngStyle]="{ 'border-left-color': data.categoryCode,
-                    'border-left-width': '5px',
+      <td class="col-xs-3" [ngStyle]="{ 'border-left-color': data.categoryCode,
+                    'border-left-width': '10px',
                     'border-left-style': 'solid' }">
         <span>{{data.transactionDate | date: 'MMM dd'}}</span>
       </td>
       <td class="col-xs-1">
         <img class="logo" src="{{data.merchantLogo}}" />
       </td>
-      <td class="col-xs-8">
+      <td class="col-xs-7">
         <h5>
           <strong>{{data.merchant}}</strong>
         </h5>
         <h6>{{data.transactionType}}</h6>
       </td>
-      <td class="col-xs-1">
-        <div>
-          <strong>-{{data.amount | currency:'USD' }}</strong>ß
-        </div>
+      <td class="col-xs-1 text-right">
+          <strong>-{{data.amount | currency:'USD' }}</strong>
       </td>
     </tr>
   </table>

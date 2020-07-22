@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "Backbase-Assignment"
+  "defaultProject": "Backbase-Assignment",
+  "cli": {
+    "analytics": "9683a3de-9798-4dbb-ae86-763203e6219c"
+  }
 }

@@ -24,8 +24,14 @@
     }
 }
 
-.table td{
-    vertical-align: middle;
+.table {
+    tr {
+        border-bottom: 1px solid #dee2e6;
+        td{
+            border: none;
+            vertical-align: middle;
+        }
+    }
 }
 
 .close{
