@@ -1,4 +1,4 @@
-# `Angular Component Architecture POC: Make A Transaction`:- Angular version 7.1.1.
+# `Angular Component Architecture POC: Make A Transaction`:- Angular version 9.1.4.
 
 ## Requirements
 
